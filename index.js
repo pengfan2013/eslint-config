@@ -12,7 +12,6 @@ module.exports = {
   plugins: [
     'import',
     'promise',
-    'unicorn',
     'css-modules',
     '@typescript-eslint',
     'react',
@@ -45,7 +44,6 @@ module.exports = {
     'airbnb', // 针对ES代码规则集合
     'eslint:recommended',
     'react-app', // 针对react项目的规定集合
-    'plugin:unicorn/recommended', // 可读性/可维护性相关的规则
     'plugin:promise/recommended', // promise 相关规则集
   ],
 
@@ -184,32 +182,6 @@ module.exports = {
     'promise/always-return': 'off', // 与省去return空语句有冲突;
     'promise/prefer-await-to-then': 'warn',
     'promise/prefer-await-to-callbacks': 'warn',
-
-    /** unicorn规则集 */
-    // 争议: 不需要两种风格, 统一一种即可
-    'unicorn/filename-case': [
-      'error',
-      {
-        cases: {
-          camelCase: true,
-        },
-      },
-    ],
-    // 争议较大: 函数式风格推荐使用, 可读性风格禁止使用, 暂时关闭
-    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-reduce.md
-    'unicorn/no-array-reduce': 'off', // unicorn作者认为Array.prototype.reduce降低了可阅读性, 不认可
-    'unicorn/prevent-abbreviations': 'off', // 比较艹蛋: 变量名建议写全( 例如res 改为response), 变量命名的单词风格还是linux这种缩写风格并不重要. 主要现有是存量API太多, 大部分还是遵循单词全拼风格, 少部分重点的属性遵从linux缩写风格
-    'unicorn/import-index': ['error'],
-    'unicorn/no-nested-ternary': 'off',
-    // 控制catch error变量名
-    // 'unicorn/catch-error-name': 'off',
-    // 'unicorn/no-array-for-each': 'off', // for...of循环的优势是可以通过break或者return退出循环
-    'unicorn/empty-brace-spaces': 'off',
-    // 'unicorn/consistent-destructuring': 'off',
-    'unicorn/no-abusive-eslint-disable': 'off',
-    'unicorn/no-keyword-prefix': ['error'],
-    'unicorn/prefer-at': ['error'],
-    'unicorn/prefer-string-replace-all': ['error'],
 
     // css-modules
     'css-modules/no-unused-class': [2, { camelCase: 'only' }],
