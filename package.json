@@ -1,6 +1,6 @@
 {
   "name": "@ivan/eslint-config",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "ESLint configuration",
   "main": "index.js",
   "files": [
@@ -8,12 +8,12 @@
   ],
   "author": "pengfan",
   "dependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.2",
     "eslint-config-react-app": "^7.0.0-next.91 ",
     "eslint-plugin-css-modules": "^2.11.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-react": "^7.26.1"
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.27.1"
   },
   "engines": {
     "node": ">=14.0.0"
